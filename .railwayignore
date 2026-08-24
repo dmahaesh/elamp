@@ -1,0 +1,7 @@
+node_modules
+dist
+.git
+video
+movie
+short video
+*.log
