@@ -15,7 +15,7 @@ import VideoPlayer from './VideoPlayer.jsx'
 // Flagship model — gets the cinematic spotlight card.
 const flagship = {
   icon: Film,
-  name: 'Natya Motion',
+  name: 'ELamp Motion',
   tag: 'Text → Video',
   desc: 'Generate up to 10 seconds of coherent, film-grade motion with camera control and consistent physics — the engine the whole studio is built on.',
   stats: [
