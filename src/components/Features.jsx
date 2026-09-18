@@ -44,7 +44,7 @@ export default function Features() {
         className="pointer-events-none absolute inset-0 -z-10 opacity-70"
         style={{
           background:
-            'radial-gradient(50% 40% at 20% 0%, rgba(255,61,129,0.12), transparent), radial-gradient(50% 40% at 90% 20%, rgba(192,38,211,0.12), transparent)',
+            'radial-gradient(50% 40% at 20% 0%, rgba(246,196,83,0.12), transparent), radial-gradient(50% 40% at 90% 20%, rgba(169,121,31,0.12), transparent)',
         }}
       />
       <div className="w-full px-[10px]">

@@ -48,7 +48,7 @@ export default function HowItWorks() {
         className="pointer-events-none absolute inset-0 -z-10 opacity-60"
         style={{
           background:
-            'radial-gradient(60% 50% at 50% 0%, rgba(192,38,211,0.14), transparent)',
+            'radial-gradient(60% 50% at 50% 0%, rgba(246,196,83,0.14), transparent)',
         }}
       />
       <div className="w-full px-[10px]">

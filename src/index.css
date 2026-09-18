@@ -4,15 +4,15 @@
   --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
   --font-sans: 'Inter', system-ui, sans-serif;
 
-  --color-ink: #06060a;
-  --color-ink-2: #0b0b12;
-  --color-ember: #ff7a3d;
-  --color-flare: #ff3d81;
-  --color-magenta: #c026d3;
-  --color-gold: #f6c453;
+  --color-ink: #050505;
+  --color-ink-2: #0d0c08;
+  --color-ember: #e0a73b;
+  --color-flare: #f6c453;
+  --color-magenta: #a9791f;
+  --color-gold: #ffd76a;
 
-  --color-fog: #a9a7b5;
-  --color-mist: #d8d6e0;
+  --color-fog: #b0a892;
+  --color-mist: #e6dcc4;
 }
 
 :root {
@@ -54,7 +54,7 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(100deg, #fff 0%, var(--color-ember) 45%, var(--color-flare) 75%, var(--color-magenta) 100%);
+  background: linear-gradient(100deg, #fff 0%, var(--color-gold) 40%, var(--color-flare) 70%, var(--color-ember) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -135,21 +135,21 @@ body {
 /* Neon marquee text */
 .neon-text {
   color: #fff;
-  text-shadow: 0 0 8px rgba(255, 61, 129, 0.55), 0 0 20px rgba(192, 38, 211, 0.45);
+  text-shadow: 0 0 8px rgba(246, 196, 83, 0.55), 0 0 20px rgba(169, 121, 31, 0.45);
   animation: neon-pulse 2.6s ease-in-out infinite;
 }
 .neon-sep {
   color: var(--color-flare);
-  text-shadow: 0 0 10px rgba(255, 61, 129, 0.8);
+  text-shadow: 0 0 10px rgba(246, 196, 83, 0.8);
 }
 @keyframes neon-pulse {
   0%, 100% {
-    text-shadow: 0 0 6px rgba(255, 61, 129, 0.45), 0 0 18px rgba(192, 38, 211, 0.35);
+    text-shadow: 0 0 6px rgba(246, 196, 83, 0.45), 0 0 18px rgba(169, 121, 31, 0.35);
     opacity: 0.9;
   }
   50% {
-    text-shadow: 0 0 14px rgba(255, 61, 129, 0.9), 0 0 34px rgba(192, 38, 211, 0.7),
-      0 0 60px rgba(255, 122, 61, 0.35);
+    text-shadow: 0 0 14px rgba(246, 196, 83, 0.9), 0 0 34px rgba(169, 121, 31, 0.7),
+      0 0 60px rgba(224, 167, 59, 0.35);
     opacity: 1;
   }
 }

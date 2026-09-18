@@ -21,7 +21,7 @@ export default function MediaSlot({
         className="absolute inset-0 animate-drift opacity-40"
         style={{
           backgroundImage:
-            'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), transparent 45%), radial-gradient(circle at 70% 60%, rgba(255,61,129,0.25), transparent 40%)',
+            'radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), transparent 45%), radial-gradient(circle at 70% 60%, rgba(246,196,83,0.25), transparent 40%)',
         }}
       />
       <div className="absolute inset-0 grid place-items-center">
