@@ -4,7 +4,7 @@
 export default function Logo({ className = 'h-10 w-10' }) {
   return (
     <img
-      src="/logo.svg"
+      src="/logo.png"
       alt="ELamp.ai"
       className={`${className} animate-logo object-contain drop-shadow-[0_4px_18px_rgba(246,196,83,0.4)]`}
     />

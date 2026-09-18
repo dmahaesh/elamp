@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { ArrowRight, Sparkles, Star } from 'lucide-react'
+import { ArrowRight, Mail } from 'lucide-react'
 import HeroVideoBg from './HeroVideoBg.jsx'
 
 const trust = ['Directors', 'Studios', 'Screenwriters', 'Producers', 'VFX Houses', 'Ad Films']
@@ -27,24 +27,6 @@ export default function Hero() {
       </div>
 
       <div className="w-full px-[10px]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="flex justify-start"
-        >
-          <a
-            href="#submit"
-            className="group flex items-center gap-2 rounded-full glass px-4 py-1.5 text-sm text-mist"
-          >
-            <span className="grid h-5 w-5 place-items-center rounded-full bg-gradient-to-br from-gold to-ember">
-              <Star className="h-3 w-3 text-ink" />
-            </span>
-            Submit your movie idea · Win ₹1 Lakh
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </a>
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,18 +53,12 @@ export default function Hero() {
           className="mt-9 flex w-full flex-col items-stretch justify-start gap-3 sm:w-auto sm:flex-row sm:items-start"
         >
           <a
-            href="#waitlist"
+            href="mailto:entertainmentlampofficial@gmail.com"
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-ink transition-transform hover:scale-[1.03]"
           >
-            Get in Waitlist
+            <Mail className="h-4 w-4" />
+            Get in Touch
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
-          <a
-            href="#submit"
-            className="inline-flex items-center justify-center gap-2 rounded-full glass px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
-          >
-            <Sparkles className="h-4 w-4 text-gold" />
-            Submit an idea
           </a>
         </motion.div>
 

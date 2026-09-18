@@ -1,5 +1,12 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Mail, Twitter, Facebook, Instagram, Youtube } from 'lucide-react'
 import Logo from './Logo.jsx'
+
+const socials = [
+  { icon: Twitter, href: 'https://twitter.com/enterlamp', label: 'Twitter' },
+  { icon: Facebook, href: 'https://facebook.com/entertainmentlamp', label: 'Facebook' },
+  { icon: Instagram, href: 'https://instagram.com/entertainmentlamp', label: 'Instagram' },
+  { icon: Youtube, href: 'https://youtube.com/@entertainmentlamp', label: 'YouTube' },
+]
 
 const groups = [
   {
@@ -29,16 +36,38 @@ export default function Footer() {
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm text-fog">
-              The AI film studio for creators. Turn a single idea into a cinematic
-              universe.
+              Where light meets lens. New age entertainment — movies, series, games,
+              TV shows and events.
             </p>
             <a
-              href="#waitlist"
+              href="mailto:entertainmentlampofficial@gmail.com"
               className="group mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.03]"
             >
-              Get in Waitlist
+              <Mail className="h-4 w-4" />
+              Get in Touch
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
+            <a
+              href="mailto:entertainmentlampofficial@gmail.com"
+              className="mt-4 flex items-center gap-2 text-sm text-fog transition-colors hover:text-white"
+            >
+              <Mail className="h-4 w-4" />
+              entertainmentlampofficial@gmail.com
+            </a>
+            <div className="mt-4 flex gap-3">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="grid h-9 w-9 place-items-center rounded-full glass text-mist transition-colors hover:text-white"
+                >
+                  <s.icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {groups.map((g) => (
