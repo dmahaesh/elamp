@@ -10,7 +10,7 @@
     "start": "serve -s dist"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "lucide-react": "^0.454.0",
