@@ -19,7 +19,6 @@ const links = [
   { label: 'Models', href: '#models' },
   { label: 'Showcase', href: '#showcase' },
   { label: 'How it works', href: '#how' },
-  { label: 'Submit Idea', href: '#submit' },
   { label: 'FAQ', href: '#faq' },
 ]
 

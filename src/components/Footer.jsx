@@ -15,7 +15,7 @@ const groups = [
   },
   {
     title: 'Program',
-    links: ['₹1 Lakh Award', 'Submit an idea', 'Founding creators', 'Waitlist'],
+    links: ['Founding creators', 'Waitlist'],
   },
   {
     title: 'Company',
@@ -93,7 +93,6 @@ export default function Footer() {
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">Privacy</a>
             <a href="#" className="hover:text-white">Terms</a>
-            <a href="#" className="hover:text-white">Award Rules</a>
           </div>
         </div>
       </div>

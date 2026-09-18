@@ -4,7 +4,6 @@ import Features from './components/Features.jsx'
 import Showcase from './components/Showcase.jsx'
 import HowItWorks from './components/HowItWorks.jsx'
 import UseCases from './components/UseCases.jsx'
-import SubmitIdea from './components/SubmitIdea.jsx'
 import Waitlist from './components/Waitlist.jsx'
 import FAQ from './components/FAQ.jsx'
 import Footer from './components/Footer.jsx'
@@ -19,7 +18,6 @@ export default function App() {
         <Showcase />
         <HowItWorks />
         <UseCases />
-        <SubmitIdea />
         <Waitlist />
         <FAQ />
       </main>
