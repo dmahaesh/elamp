@@ -182,7 +182,7 @@ export default function StoryPromptBar() {
                 </span>
               )}
               <span className="hidden items-center gap-1.5 text-sm text-mist/70 sm:flex">
-                <Clapperboard className="h-4 w-4" /> Natyaras 1.0
+                <Clapperboard className="h-4 w-4" /> ELamp.ai 1.0
               </span>
               <button
                 onClick={submitStory}

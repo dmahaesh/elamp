@@ -6,14 +6,18 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="#0a0a0f"/>
+  <!-- glow rays -->
   <g stroke="url(#g)" stroke-width="3" stroke-linecap="round" opacity="0.9">
     <path d="M32 5v5"/>
     <path d="M13 13l3.5 3.5"/>
     <path d="M51 13l-3.5 3.5"/>
   </g>
+  <!-- bulb -->
   <path d="M32 11a13 13 0 0 0-8 23.3c1.6 1.3 2.6 2.6 2.9 4.7h10.2c.3-2.1 1.3-3.4 2.9-4.7A13 13 0 0 0 32 11Z"
         fill="none" stroke="url(#g)" stroke-width="4" stroke-linejoin="round"/>
+  <!-- filament -->
   <path d="M28 26l4 4 4-4" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- screw base -->
   <g stroke="url(#g)" stroke-width="4" stroke-linecap="round">
     <path d="M27 44h10"/>
     <path d="M28.5 49h7"/>

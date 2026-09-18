@@ -60,7 +60,7 @@ export default function Showcase() {
 
           <div className="flex items-center gap-4">
             <p className="hidden text-fog md:block md:max-w-xs md:text-right">
-              A living gallery of shots made on Natyaras.
+              A living gallery of shots made on ELamp.ai.
             </p>
             <div className="flex gap-2">
               <button

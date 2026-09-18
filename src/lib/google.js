@@ -1,7 +1,7 @@
 // Google Sign-In (Google Identity Services, OAuth token flow).
 // Add your key later in a `.env` file:  VITE_GOOGLE_CLIENT_ID=xxxx.apps.googleusercontent.com
 const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID || ''
-const USER_KEY = 'natyaras_user'
+const USER_KEY = 'elamp_user'
 
 let scriptPromise = null
 function loadGsi() {
@@ -46,7 +46,7 @@ export async function signInWithGoogle() {
     const user = {
       sub: 'local-dev',
       name: 'Guest Creator',
-      email: 'guest@natyaras.local',
+      email: 'guest@elamp.local',
       mock: true,
     }
     setCurrentUser(user)

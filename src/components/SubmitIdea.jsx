@@ -3,7 +3,7 @@ import Reveal from './Reveal.jsx'
 import { Trophy, Send, CheckCircle2, Film, IndianRupee } from 'lucide-react'
 
 const perks = [
-  'Your idea produced as a full Natyaras film',
+  'Your idea produced as a full ELamp.ai film',
   '₹1,00,000 cash award on selection',
   'On-screen story credit',
 ]
@@ -38,7 +38,7 @@ export default function SubmitIdea() {
               </h2>
 
               <p className="mt-4 max-w-md text-fog">
-                Have a script or a spark of a story? Send it to Natyaras. If it’s
+                Have a script or a spark of a story? Send it to ELamp.ai. If it’s
                 selected for full movie production, you earn a{' '}
                 <span className="font-semibold text-white">₹1 Lakh award</span> — and
                 we bring it to the screen.

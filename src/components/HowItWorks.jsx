@@ -6,7 +6,7 @@ const steps = [
   {
     icon: PenLine,
     title: 'Write the idea',
-    desc: 'Type a logline, paste a script, or describe a single scene. Natyaras understands story structure.',
+    desc: 'Type a logline, paste a script, or describe a single scene. ELamp.ai understands story structure.',
   },
   {
     icon: Clapperboard,

@@ -3,7 +3,7 @@
 // function URL that inserts a row. Until then, rows are kept in localStorage so
 // the flow works end-to-end during development.
 const ENDPOINT = import.meta.env.VITE_SUBMISSIONS_ENDPOINT || ''
-const LS_KEY = 'natyaras_submissions'
+const LS_KEY = 'elamp_submissions'
 
 export async function saveSubmission(row) {
   const record = { ...row, createdAt: new Date().toISOString() }

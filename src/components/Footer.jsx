@@ -25,7 +25,7 @@ export default function Footer() {
             <a href="#top" className="flex items-center gap-2">
               <Logo className="h-9 w-9" />
               <span className="font-display text-xl font-extrabold text-white">
-                natyaras
+                ELamp.ai
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm text-fog">
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-9 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-mist/50 md:flex-row">
-          <p>© {new Date().getFullYear()} Natyaras. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ELamp.ai. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">Privacy</a>
             <a href="#" className="hover:text-white">Terms</a>

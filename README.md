@@ -1,6 +1,6 @@
-# Natyaras — AI Film Studio landing page
+# ELamp.ai — AI Film Studio landing page
 
-Cinematic marketing site for **Natyaras**, an AI film studio for creators and studios.
+Cinematic marketing site for **ELamp.ai**, an AI film studio for creators and studios.
 Built with Vite + React + Tailwind CSS v4 + Motion.
 
 ## Features

@@ -37,7 +37,7 @@ export default function Navbar() {
         <a href="#top" className="flex items-center gap-2">
           <Logo className="h-9 w-9" />
           <span className="font-display text-xl font-extrabold tracking-tight text-white">
-            natyaras
+            ELamp.ai
           </span>
         </a>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm text-fog transition-colors hover:text-white"
+                className="text-base font-medium text-mist transition-colors hover:text-white"
               >
                 {l.label}
               </a>

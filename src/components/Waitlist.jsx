@@ -33,7 +33,7 @@ export default function Waitlist() {
             Early access
           </p>
           <h2 className="font-display mt-4 text-4xl font-extrabold leading-tight text-white md:text-6xl">
-            Be first on the <span className="text-gradient">Natyaras</span> set
+            Be first on the <span className="text-gradient">ELamp.ai</span> set
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-lg text-fog">
             Join the waitlist to get early access, priority render credits, and an

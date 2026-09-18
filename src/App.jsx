@@ -8,7 +8,6 @@ import SubmitIdea from './components/SubmitIdea.jsx'
 import Waitlist from './components/Waitlist.jsx'
 import FAQ from './components/FAQ.jsx'
 import Footer from './components/Footer.jsx'
-import StoryPromptBar from './components/StoryPromptBar.jsx'
 
 export default function App() {
   return (
@@ -25,9 +24,6 @@ export default function App() {
         <FAQ />
       </main>
       <Footer />
-      {/* spacer so the fixed prompt bar never covers the footer */}
-      <div className="h-40 sm:h-32" />
-      <StoryPromptBar />
     </div>
   )
 }

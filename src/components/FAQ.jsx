@@ -5,15 +5,15 @@ import Reveal from './Reveal.jsx'
 
 const faqs = [
   {
-    q: 'What exactly is Natyaras?',
-    a: 'Natyaras is an AI film studio. You describe a story in text and our models generate cinematic video, characters, camera moves, and score — everything you need to take an idea to a finished film.',
+    q: 'What exactly is ELamp.ai?',
+    a: 'ELamp.ai is an AI film studio. You describe a story in text and our models generate cinematic video, characters, camera moves, and score — everything you need to take an idea to a finished film.',
   },
   {
     q: 'How does the ₹1 Lakh Story Award work?',
-    a: 'Submit your movie idea or script through the form above. Our story team reviews every entry. If your idea is selected for full movie production on Natyaras, you receive a ₹1,00,000 cash award plus an on-screen story credit. There is no entry fee.',
+    a: 'Submit your movie idea or script through the form above. Our story team reviews every entry. If your idea is selected for full movie production on ELamp.ai, you receive a ₹1,00,000 cash award plus an on-screen story credit. There is no entry fee.',
   },
   {
-    q: 'Who is Natyaras for?',
+    q: 'Who is ELamp.ai for?',
     a: 'Independent filmmakers, studios and production houses, screenwriters, ad agencies and content teams — anyone who tells stories and wants to move faster from idea to screen.',
   },
   {
