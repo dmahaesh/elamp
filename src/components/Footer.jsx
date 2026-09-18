@@ -29,9 +29,9 @@ export default function Footer() {
       <div className="w-full px-[10px]">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <a href="#top" className="flex items-center gap-2">
-              <Logo className="h-9 w-9" />
-              <span className="font-display text-xl font-extrabold text-white">
+            <a href="#top" className="flex items-center gap-2.5">
+              <Logo className="h-14 w-14" />
+              <span className="font-display text-2xl font-extrabold text-white">
                 ELamp.ai
               </span>
             </a>

@@ -50,9 +50,9 @@ export default function Navbar() {
           scrolled ? 'glass glow-ring' : 'border border-transparent'
         }`}
       >
-        <a href="#top" className="flex items-center gap-2">
-          <Logo className="h-9 w-9" />
-          <span className="font-display text-xl font-extrabold tracking-tight text-white">
+        <a href="#top" className="flex items-center gap-2.5">
+          <Logo className="h-14 w-14 md:h-16 md:w-16" />
+          <span className="font-display text-2xl font-extrabold tracking-tight text-white">
             ELamp.ai
           </span>
         </a>
