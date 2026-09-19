@@ -1,5 +1,7 @@
 import { ArrowRight, Mail, Twitter, Facebook, Instagram, Youtube } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Logo from './Logo.jsx'
+import { pillars } from '../lib/elamp.js'
 
 const socials = [
   { icon: Twitter, href: 'https://twitter.com/enterlamp', label: 'Twitter' },
@@ -10,16 +12,16 @@ const socials = [
 
 const groups = [
   {
-    title: 'Studio',
-    links: ['Models', 'Showcase', 'How it works', 'Use cases'],
+    title: 'Network',
+    links: pillars.map((p) => ({ label: p.name, to: p.path })),
   },
   {
     title: 'Program',
-    links: ['Founding creators', 'Waitlist'],
+    links: [{ label: 'Founding creators' }, { label: 'Waitlist' }],
   },
   {
     title: 'Company',
-    links: ['About', 'Careers', 'Contact', 'Press'],
+    links: [{ label: 'About' }, { label: 'Careers' }, { label: 'Contact' }, { label: 'Press' }],
   },
 ]
 
@@ -29,12 +31,12 @@ export default function Footer() {
       <div className="w-full px-[10px]">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <a href="#top" className="flex items-center gap-2.5">
+            <Link to="/" className="flex items-center gap-2.5">
               <Logo className="h-14 w-14" />
               <span className="font-display text-2xl font-extrabold text-white">
                 ELamp.ai
               </span>
-            </a>
+            </Link>
             <p className="mt-4 max-w-xs text-sm text-fog">
               Where light meets lens. New age entertainment — movies, series, games,
               TV shows and events.
@@ -77,10 +79,16 @@ export default function Footer() {
               </h4>
               <ul className="mt-4 space-y-3">
                 {g.links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-sm text-fog transition-colors hover:text-white">
-                      {l}
-                    </a>
+                  <li key={l.label}>
+                    {l.to ? (
+                      <Link to={l.to} className="text-sm text-fog transition-colors hover:text-white">
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a href="#" className="text-sm text-fog transition-colors hover:text-white">
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

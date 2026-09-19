@@ -1,27 +1,24 @@
-import Navbar from './components/Navbar.jsx'
-import Hero from './components/Hero.jsx'
-import Features from './components/Features.jsx'
-import Showcase from './components/Showcase.jsx'
-import HowItWorks from './components/HowItWorks.jsx'
-import UseCases from './components/UseCases.jsx'
-import Waitlist from './components/Waitlist.jsx'
-import FAQ from './components/FAQ.jsx'
-import Footer from './components/Footer.jsx'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout.jsx'
+import Home from './pages/Home.jsx'
+import Envision from './pages/Envision.jsx'
+import Lens from './pages/Lens.jsx'
+import Amplify from './pages/Amplify.jsx'
+import Multiply from './pages/Multiply.jsx'
+import Profit from './pages/Profit.jsx'
 
 export default function App() {
   return (
-    <div className="grain relative min-h-screen overflow-x-hidden bg-ink text-mist">
-      <Navbar />
-      <main>
-        <Hero />
-        <Features />
-        <Showcase />
-        <HowItWorks />
-        <UseCases />
-        <Waitlist />
-        <FAQ />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/envision" element={<Envision />} />
+        <Route path="/lens" element={<Lens />} />
+        <Route path="/amplify" element={<Amplify />} />
+        <Route path="/multiply" element={<Multiply />} />
+        <Route path="/profit" element={<Profit />} />
+        <Route path="*" element={<Home />} />
+      </Route>
+    </Routes>
   )
 }

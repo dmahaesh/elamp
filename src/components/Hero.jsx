@@ -1,8 +1,8 @@
 import { motion } from 'motion/react'
-import { ArrowRight, Mail } from 'lucide-react'
+import { ArrowRight, ArrowDown, Mail } from 'lucide-react'
 import HeroVideoBg from './HeroVideoBg.jsx'
 
-const trust = ['Directors', 'Studios', 'Screenwriters', 'Producers', 'VFX Houses', 'Ad Films']
+const trust = ['Envision', 'Lens', 'Amplify', 'Multiply', 'Profit']
 
 export default function Hero() {
   return (
@@ -27,14 +27,24 @@ export default function Hero() {
       </div>
 
       <div className="w-full px-[10px]">
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 rounded-full glass px-4 py-1.5 text-sm font-medium text-mist"
+        >
+          Idea <span className="text-flare">→</span> Create <span className="text-flare">→</span> Promote{' '}
+          <span className="text-flare">→</span> Distribute <span className="text-flare">→</span> Monetize
+        </motion.p>
+
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display mt-7 max-w-4xl text-left text-[2.5rem] font-extrabold leading-[1.02] text-white sm:text-6xl sm:leading-[0.98] md:text-7xl"
+          className="font-display mt-6 max-w-4xl text-left text-[2.5rem] font-extrabold leading-[1.02] text-white sm:text-6xl sm:leading-[0.98] md:text-7xl"
         >
-          Turn a single <span className="text-gradient">idea</span> into a
-          <br className="hidden sm:block" /> cinematic universe.
+          The <span className="text-gradient">AI-Native</span>
+          <br className="hidden sm:block" /> Media Network.
         </motion.h1>
 
         <motion.p
@@ -43,7 +53,8 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="mt-6 max-w-xl text-left text-lg text-fog"
         >
-          The AI film studio for creators. Turn text into cinematic film.
+          From an idea in your head to an audience around the world. ELamp turns
+          stories into films, films into reach, and reach into revenue.
         </motion.p>
 
         <motion.div
@@ -59,6 +70,13 @@ export default function Hero() {
             <Mail className="h-4 w-4" />
             Get in Touch
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </a>
+          <a
+            href="#network"
+            className="group inline-flex items-center justify-center gap-2 rounded-full glass px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            Explore the network
+            <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
           </a>
         </motion.div>
 

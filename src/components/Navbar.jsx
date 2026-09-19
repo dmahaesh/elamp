@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
+import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo.jsx'
 import { signInWithGoogle } from '../lib/google.js'
+import { pillars } from '../lib/elamp.js'
 
 function GoogleIcon({ className = '' }) {
   return (
@@ -15,12 +17,7 @@ function GoogleIcon({ className = '' }) {
   )
 }
 
-const links = [
-  { label: 'Models', href: '#models' },
-  { label: 'Showcase', href: '#showcase' },
-  { label: 'How it works', href: '#how' },
-  { label: 'FAQ', href: '#faq' },
-]
+const links = pillars.map((p) => ({ label: p.name, to: p.path }))
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -49,22 +46,22 @@ export default function Navbar() {
           scrolled ? 'glass glow-ring' : 'border border-transparent'
         }`}
       >
-        <a href="#top" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center gap-2.5">
           <Logo className="h-14 w-14 md:h-16 md:w-16" />
           <span className="font-display text-2xl font-extrabold tracking-tight text-white">
             ELamp.ai
           </span>
-        </a>
+        </Link>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
+            <li key={l.to}>
+              <Link
+                to={l.to}
                 className="text-base font-medium text-mist transition-colors hover:text-white"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -96,14 +93,14 @@ export default function Navbar() {
         >
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
+              <li key={l.to}>
+                <Link
+                  to={l.to}
                   onClick={() => setOpen(false)}
                   className="block rounded-lg px-3 py-2.5 text-sm text-mist hover:bg-white/5"
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li>
