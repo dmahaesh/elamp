@@ -46,11 +46,8 @@ export default function Navbar() {
           scrolled ? 'glass glow-ring' : 'border border-transparent'
         }`}
       >
-        <Link to="/" className="flex items-center gap-2.5">
-          <Logo className="h-14 w-14 md:h-16 md:w-16" />
-          <span className="font-display text-2xl font-extrabold tracking-tight text-white">
-            ELamp.ai
-          </span>
+        <Link to="/" className="flex items-center">
+          <Logo className="h-9 w-auto md:h-11" />
         </Link>
 
         <ul className="hidden items-center gap-7 md:flex">

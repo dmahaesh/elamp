@@ -31,11 +31,8 @@ export default function Footer() {
       <div className="w-full px-[10px]">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Link to="/" className="flex items-center gap-2.5">
-              <Logo className="h-14 w-14" />
-              <span className="font-display text-2xl font-extrabold text-white">
-                ELamp.ai
-              </span>
+            <Link to="/" className="flex items-center">
+              <Logo className="h-11 w-auto" />
             </Link>
             <p className="mt-4 max-w-xs text-sm text-fog">
               Where light meets lens. New age entertainment — movies, series, games,
