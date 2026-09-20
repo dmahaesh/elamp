@@ -1,6 +1,5 @@
 import { ArrowRight, Mail, Twitter, Facebook, Instagram, Youtube } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import Logo from './Logo.jsx'
 import { pillars } from '../lib/elamp.js'
 
 const socials = [
@@ -31,8 +30,15 @@ export default function Footer() {
       <div className="w-full px-[10px]">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Link to="/" className="flex items-center">
-              <Logo className="h-11 w-auto" />
+            <Link to="/" className="flex items-center gap-2.5">
+              <img
+                src="/elamp-icon.png"
+                alt="ELamp.ai"
+                className="h-12 w-12 object-contain"
+              />
+              <span className="font-display text-2xl font-extrabold text-white">
+                ELamp.ai
+              </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-fog">
               Where light meets lens. New age entertainment — movies, series, games,
