@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
@@ -15,10 +16,31 @@ const tints = [
 
 function PillarVisual({ p, tint }) {
   const Icon = p.icon
+  const [failed, setFailed] = useState(false)
+  const media = failed ? null : p.video || p.image
+
   return (
     <div className="group/vis relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 glass">
-      {p.image ? (
-        <img src={p.image} alt={p.name} className="h-full w-full object-cover" />
+      {media ? (
+        p.video ? (
+          <video
+            src={p.video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            onError={() => setFailed(true)}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <img
+            src={p.image}
+            alt={p.name}
+            onError={() => setFailed(true)}
+            className="h-full w-full object-cover"
+          />
+        )
       ) : (
         <>
           <div className={`absolute inset-0 bg-gradient-to-br ${tint}`} />

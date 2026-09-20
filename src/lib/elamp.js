@@ -14,6 +14,7 @@ export const pillars = [
       'Scriptwriting, story development, characters, concepts, treatments, screenplays and ad concepts.',
     path: '/envision',
     icon: PenLine,
+    video: '/envision.mp4',
   },
   {
     key: 'lens',
@@ -26,6 +27,7 @@ export const pillars = [
       'AI filmmaking, ads, shorts, scenes, characters, voices, music, editing and final production.',
     path: '/lens',
     icon: Clapperboard,
+    video: '/lens.mp4',
   },
   {
     key: 'amplify',
@@ -38,6 +40,7 @@ export const pillars = [
       'Campaigns, social content and promotional hooks — powered by creator and celebrity networks that generate attention around your film, brand or story.',
     path: '/amplify',
     icon: Megaphone,
+    video: '/amplify.mp4',
   },
   {
     key: 'multiply',
@@ -50,6 +53,7 @@ export const pillars = [
       "ELamp's owned media properties, partner networks, social platforms, creators and other distribution channels multiply the audience for your content.",
     path: '/multiply',
     icon: Share2,
+    video: '/multiply.mp4',
   },
   {
     key: 'profit',
@@ -62,5 +66,6 @@ export const pillars = [
       'Monetize films, ads, IP and audiences through advertising, licensing, sponsorships, subscriptions, commerce and other revenue models.',
     path: '/profit',
     icon: TrendingUp,
+    video: '/profit.mp4',
   },
 ]
