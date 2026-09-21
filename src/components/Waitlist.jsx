@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Reveal from './Reveal.jsx'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { signInWithGoogle } from '../lib/google.js'
+import { joinWaitlist } from '../lib/api.js'
 
 function GoogleIcon({ className = '' }) {
   return (
@@ -15,10 +17,20 @@ function GoogleIcon({ className = '' }) {
 
 export default function Waitlist() {
   const [joined, setJoined] = useState(false)
+  const [busy, setBusy] = useState(false)
 
-  const joinWithGoogle = () => {
-    // Placeholder: wire this to Google OAuth / your waitlist backend.
-    setJoined(true)
+  const joinWithGoogle = async () => {
+    if (busy) return
+    setBusy(true)
+    try {
+      const user = await signInWithGoogle()
+      await joinWaitlist(user)
+      setJoined(true)
+    } catch {
+      // sign-in cancelled
+    } finally {
+      setBusy(false)
+    }
   }
 
   return (
@@ -56,10 +68,11 @@ export default function Waitlist() {
             <div className="rounded-2xl glass glow-ring p-6">
               <button
                 onClick={joinWithGoogle}
-                className="group inline-flex w-full items-center justify-center gap-3 rounded-xl bg-white px-6 py-4 font-semibold text-ink transition-transform hover:scale-[1.02]"
+                disabled={busy}
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-xl bg-white px-6 py-4 font-semibold text-ink transition-transform hover:scale-[1.02] disabled:opacity-70"
               >
                 <GoogleIcon className="h-5 w-5" />
-                Continue with Google
+                {busy ? 'Signing in…' : 'Continue with Google'}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </button>
               <p className="mt-3 text-xs text-mist/50">

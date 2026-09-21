@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import Logo from './Logo.jsx'
 import { signInWithGoogle } from '../lib/google.js'
 import { pillars } from '../lib/elamp.js'
@@ -17,7 +17,11 @@ function GoogleIcon({ className = '' }) {
   )
 }
 
-const links = pillars.map((p) => ({ label: p.name, to: p.path }))
+const flat = [
+  { label: 'Work', to: '/work' },
+  { label: 'About', to: '/about' },
+  { label: 'Contact', to: '/contact' },
+]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -51,12 +55,36 @@ export default function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-7 md:flex">
-          {links.map((l) => (
+          {/* Network dropdown */}
+          <li className="group relative">
+            <button className="flex items-center gap-1 text-base font-medium text-mist transition-colors hover:text-white">
+              Network
+              <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+            </button>
+            <div className="invisible absolute left-1/2 top-full z-50 w-60 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+              <div className="rounded-2xl glass glow-ring p-2">
+                {pillars.map((p) => (
+                  <Link
+                    key={p.key}
+                    to={p.path}
+                    className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-mist transition-colors hover:bg-white/5 hover:text-white"
+                  >
+                    <span className="font-display grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-gradient-to-br from-gold to-ember text-xs font-extrabold text-ink">
+                      {p.letter}
+                    </span>
+                    <span>
+                      <span className="block font-semibold text-white">{p.name}</span>
+                      <span className="block text-xs text-fog">{p.verb}</span>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </li>
+
+          {flat.map((l) => (
             <li key={l.to}>
-              <Link
-                to={l.to}
-                className="text-base font-medium text-mist transition-colors hover:text-white"
-              >
+              <Link to={l.to} className="text-base font-medium text-mist transition-colors hover:text-white">
                 {l.label}
               </Link>
             </li>
@@ -86,10 +114,28 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute inset-x-4 top-20 z-50 rounded-2xl glass p-4 md:hidden"
+          className="absolute inset-x-4 top-20 z-50 max-h-[75vh] overflow-y-auto rounded-2xl glass p-4 md:hidden"
         >
+          <p className="px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-[0.2em] text-flare">Network</p>
           <ul className="flex flex-col gap-1">
-            {links.map((l) => (
+            {pillars.map((p) => (
+              <li key={p.key}>
+                <Link
+                  to={p.path}
+                  onClick={() => setOpen(false)}
+                  className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-mist hover:bg-white/5"
+                >
+                  <span className="font-display grid h-7 w-7 shrink-0 place-items-center rounded-md bg-gradient-to-br from-gold to-ember text-xs font-extrabold text-ink">
+                    {p.letter}
+                  </span>
+                  {p.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="my-2 border-t border-white/10" />
+          <ul className="flex flex-col gap-1">
+            {flat.map((l) => (
               <li key={l.to}>
                 <Link
                   to={l.to}

@@ -8,12 +8,19 @@ const groups = [
     links: pillars.map((p) => ({ label: p.name, to: p.path })),
   },
   {
-    title: 'Program',
-    links: [{ label: 'Founding creators' }, { label: 'Waitlist' }],
+    title: 'Company',
+    links: [
+      { label: 'About', to: '/about' },
+      { label: 'Work', to: '/work' },
+      { label: 'Contact', to: '/contact' },
+    ],
   },
   {
-    title: 'Company',
-    links: [{ label: 'About' }, { label: 'Careers' }, { label: 'Contact' }, { label: 'Press' }],
+    title: 'Legal',
+    links: [
+      { label: 'Privacy', to: '/privacy' },
+      { label: 'Terms', to: '/terms' },
+    ],
   },
 ]
 
@@ -74,8 +81,8 @@ export default function Footer() {
         <div className="mt-9 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-mist/50 md:flex-row">
           <p>© {new Date().getFullYear()} ELamp.ai. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
+            <Link to="/privacy" className="hover:text-white">Privacy</Link>
+            <Link to="/terms" className="hover:text-white">Terms</Link>
           </div>
         </div>
       </div>
