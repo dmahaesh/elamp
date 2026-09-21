@@ -1,13 +1,6 @@
-import { ArrowRight, Mail, Twitter, Facebook, Instagram, Youtube } from 'lucide-react'
+import { ArrowRight, Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { pillars } from '../lib/elamp.js'
-
-const socials = [
-  { icon: Twitter, href: 'https://twitter.com/enterlamp', label: 'Twitter' },
-  { icon: Facebook, href: 'https://facebook.com/entertainmentlamp', label: 'Facebook' },
-  { icon: Instagram, href: 'https://instagram.com/entertainmentlamp', label: 'Instagram' },
-  { icon: Youtube, href: 'https://youtube.com/@entertainmentlamp', label: 'YouTube' },
-]
 
 const groups = [
   {
@@ -52,27 +45,6 @@ export default function Footer() {
               Get in Touch
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <a
-              href="mailto:entertainmentlampofficial@gmail.com"
-              className="mt-4 flex items-center gap-2 text-sm text-fog transition-colors hover:text-white"
-            >
-              <Mail className="h-4 w-4" />
-              entertainmentlampofficial@gmail.com
-            </a>
-            <div className="mt-4 flex gap-3">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="grid h-9 w-9 place-items-center rounded-full glass text-mist transition-colors hover:text-white"
-                >
-                  <s.icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {groups.map((g) => (
