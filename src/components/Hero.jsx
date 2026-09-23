@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { Link } from 'react-router-dom'
 import { ArrowRight, ArrowDown, Mail } from 'lucide-react'
 import HeroVideoBg from './HeroVideoBg.jsx'
 
@@ -63,14 +64,14 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
           className="mt-9 flex w-full flex-col items-stretch justify-start gap-3 sm:w-auto sm:flex-row sm:items-start"
         >
-          <a
-            href="mailto:entertainmentlampofficial@gmail.com"
+          <Link
+            to="/contact"
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-ink transition-transform hover:scale-[1.03]"
           >
             <Mail className="h-4 w-4" />
             Get in Touch
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
           <a
             href="#network"
             className="group inline-flex items-center justify-center gap-2 rounded-full glass px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"

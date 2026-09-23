@@ -28,14 +28,14 @@ export default function ComingSoon({ pillarKey }) {
               partner with us on it?
             </p>
 
-            <a
-              href="mailto:entertainmentlampofficial@gmail.com"
+            <Link
+              to="/contact"
               className="group mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-ink transition-transform hover:scale-[1.03]"
             >
               <Mail className="h-4 w-4" />
               Get in Touch
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
 
             {next && (
               <div className="mt-8 border-t border-white/10 pt-6">

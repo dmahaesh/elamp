@@ -44,14 +44,14 @@ export default function Footer() {
               Where light meets lens. New age entertainment — movies, series, games,
               TV shows and events.
             </p>
-            <a
-              href="mailto:entertainmentlampofficial@gmail.com"
+            <Link
+              to="/contact"
               className="group mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink transition-transform hover:scale-[1.03]"
             >
               <Mail className="h-4 w-4" />
               Get in Touch
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
           </div>
 
           {groups.map((g) => (

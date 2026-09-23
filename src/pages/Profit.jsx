@@ -90,14 +90,14 @@ export default function Profit() {
               </p>
 
               <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-                <a
-                  href="mailto:entertainmentlampofficial@gmail.com"
+                <Link
+                  to="/contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-ink transition-transform hover:scale-[1.03]"
                 >
                   <Mail className="h-4 w-4" />
                   Get in Touch
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
                 <a
                   href="#capabilities"
                   className="inline-flex items-center justify-center gap-2 rounded-full glass px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
@@ -252,14 +252,14 @@ export default function Profit() {
                 Idea to audience to revenue — the whole network, end to end.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <a
-                  href="mailto:entertainmentlampofficial@gmail.com"
+                <Link
+                  to="/contact"
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-base font-semibold text-ink transition-transform hover:scale-[1.03]"
                 >
                   <Mail className="h-4 w-4" />
                   Get in Touch
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                </Link>
                 <Link
                   to={next ? next.path : '/#network'}
                   className="inline-flex items-center justify-center gap-2 rounded-full glass px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"

@@ -124,7 +124,10 @@ export default function ElampFlow() {
               const tint = tints[i % tints.length]
               return (
                 <Reveal key={p.key} delay={0.04}>
-                  <div className="relative grid items-center gap-6 md:grid-cols-2 md:gap-20">
+                  <Link
+                    to={p.path}
+                    className="group relative grid items-center gap-6 rounded-3xl md:grid-cols-2 md:gap-20"
+                  >
                     {/* center node with letter (desktop) */}
                     <span className="font-display absolute left-1/2 top-1/2 z-10 hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-2xl border border-gold/40 bg-ink text-2xl font-extrabold text-gold shadow-[0_0_0_6px_rgba(5,5,5,1),0_0_30px_-4px_rgba(246,196,83,0.7)] md:grid">
                       {p.letter}
@@ -168,15 +171,12 @@ export default function ElampFlow() {
                         <span className="text-gradient">{p.tagline}</span>
                       </p>
 
-                      <Link
-                        to={p.path}
-                        className="group mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition-transform hover:scale-[1.04]"
-                      >
+                      <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition-transform group-hover:scale-[1.04]">
                         Explore {p.name}
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      </Link>
+                      </span>
                     </div>
-                  </div>
+                  </Link>
                 </Reveal>
               )
             })}
