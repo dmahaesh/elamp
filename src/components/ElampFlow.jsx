@@ -29,7 +29,7 @@ function PillarVisual({ p, tint }) {
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             onError={() => setFailed(true)}
             className="h-full w-full object-cover"
           />
