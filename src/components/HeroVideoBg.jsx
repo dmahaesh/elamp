@@ -36,7 +36,7 @@ export default function HeroVideoBg() {
           muted
           loop={single}
           playsInline
-          preload="auto"
+          preload="metadata"
           onEnded={single ? undefined : next}
           initial={{ opacity: 0, scale: 1.06 }}
           animate={{ opacity: 1, scale: 1 }}
