@@ -1,16 +1,20 @@
+import { lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
-import Envision from './pages/Envision.jsx'
-import Lens from './pages/Lens.jsx'
-import Amplify from './pages/Amplify.jsx'
-import Multiply from './pages/Multiply.jsx'
-import Profit from './pages/Profit.jsx'
-import Work from './pages/Work.jsx'
-import About from './pages/About.jsx'
-import Contact from './pages/Contact.jsx'
-import Privacy from './pages/Privacy.jsx'
-import Terms from './pages/Terms.jsx'
+
+// Route-level code splitting: only Home + the shell load on first paint;
+// each other page is fetched on navigation.
+const Envision = lazy(() => import('./pages/Envision.jsx'))
+const Lens = lazy(() => import('./pages/Lens.jsx'))
+const Amplify = lazy(() => import('./pages/Amplify.jsx'))
+const Multiply = lazy(() => import('./pages/Multiply.jsx'))
+const Profit = lazy(() => import('./pages/Profit.jsx'))
+const Work = lazy(() => import('./pages/Work.jsx'))
+const About = lazy(() => import('./pages/About.jsx'))
+const Contact = lazy(() => import('./pages/Contact.jsx'))
+const Privacy = lazy(() => import('./pages/Privacy.jsx'))
+const Terms = lazy(() => import('./pages/Terms.jsx'))
 
 export default function App() {
   return (
