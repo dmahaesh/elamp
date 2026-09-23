@@ -7,9 +7,7 @@ import { AnimatePresence, motion } from 'motion/react'
  * crossfades from one to the next.
  */
 const CLIPS = [
-  '/hero-1.mp4',
-  '/hero-2.mp4',
-  '/hero-3.mp4',
+  '/hero.mp4',
 ]
 
 export default function HeroVideoBg() {
