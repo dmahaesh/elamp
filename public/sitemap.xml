@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://elamp.ai/</loc><priority>1.0</priority></url>
+  <url><loc>https://elamp.ai/envision</loc><priority>0.8</priority></url>
+  <url><loc>https://elamp.ai/lens</loc><priority>0.8</priority></url>
+  <url><loc>https://elamp.ai/amplify</loc><priority>0.8</priority></url>
+  <url><loc>https://elamp.ai/multiply</loc><priority>0.8</priority></url>
+  <url><loc>https://elamp.ai/profit</loc><priority>0.8</priority></url>
+  <url><loc>https://elamp.ai/work</loc><priority>0.6</priority></url>
+  <url><loc>https://elamp.ai/about</loc><priority>0.6</priority></url>
+  <url><loc>https://elamp.ai/contact</loc><priority>0.7</priority></url>
+  <url><loc>https://elamp.ai/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://elamp.ai/terms</loc><priority>0.3</priority></url>
+</urlset>
