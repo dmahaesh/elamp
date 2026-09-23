@@ -1,10 +1,30 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, LogOut } from 'lucide-react'
 import Logo from './Logo.jsx'
-import { signInWithGoogle } from '../lib/google.js'
+import { signInWithGoogle, getCurrentUser, signOut } from '../lib/google.js'
+import { joinWaitlist } from '../lib/api.js'
 import { pillars } from '../lib/elamp.js'
+
+function Avatar({ user, size = 'h-7 w-7' }) {
+  if (user?.picture) {
+    return (
+      <img
+        src={user.picture}
+        alt={user.name || 'You'}
+        referrerPolicy="no-referrer"
+        className={`${size} rounded-full object-cover`}
+      />
+    )
+  }
+  const initial = (user?.name || user?.email || '?').trim().charAt(0).toUpperCase()
+  return (
+    <span className={`${size} grid place-items-center rounded-full bg-gradient-to-br from-gold to-ember text-xs font-bold text-ink`}>
+      {initial}
+    </span>
+  )
+}
 
 function GoogleIcon({ className = '' }) {
   return (
@@ -26,10 +46,24 @@ const flat = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [user, setUser] = useState(() => getCurrentUser())
 
-  const loginWithGoogle = () => {
-    signInWithGoogle().catch(() => {})
+  const loginWithGoogle = async () => {
+    try {
+      const u = await signInWithGoogle()
+      setUser(u)
+      joinWaitlist(u)
+    } catch {
+      // sign-in cancelled
+    }
   }
+
+  const logout = () => {
+    signOut()
+    setUser(null)
+  }
+
+  const firstName = (user?.name || user?.email || '').split(' ')[0]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -91,14 +125,31 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <button
-            onClick={loginWithGoogle}
-            className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-ink transition-transform hover:scale-[1.03]"
-          >
-            <GoogleIcon className="h-4 w-4" />
-            Log in with Google
-          </button>
+        <div className="hidden items-center gap-2 md:flex">
+          {user ? (
+            <>
+              <span className="flex items-center gap-2 rounded-full glass py-1 pl-1 pr-3">
+                <Avatar user={user} />
+                <span className="max-w-[120px] truncate text-sm font-medium text-white">{firstName}</span>
+              </span>
+              <button
+                onClick={logout}
+                title="Sign out"
+                aria-label="Sign out"
+                className="grid h-9 w-9 place-items-center rounded-full border border-white/10 text-mist transition-colors hover:bg-white/5 hover:text-white"
+              >
+                <LogOut className="h-4 w-4" />
+              </button>
+            </>
+          ) : (
+            <button
+              onClick={loginWithGoogle}
+              className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-ink transition-transform hover:scale-[1.03]"
+            >
+              <GoogleIcon className="h-4 w-4" />
+              Log in with Google
+            </button>
+          )}
         </div>
 
         <button
@@ -147,16 +198,34 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <button
-                onClick={() => {
-                  setOpen(false)
-                  loginWithGoogle()
-                }}
-                className="mt-1 flex w-full items-center justify-center gap-2 rounded-lg bg-white px-3 py-2.5 text-center text-sm font-semibold text-ink"
-              >
-                <GoogleIcon className="h-4 w-4" />
-                Log in with Google
-              </button>
+              {user ? (
+                <div className="mt-1 flex items-center justify-between gap-2 rounded-lg glass px-3 py-2.5">
+                  <span className="flex items-center gap-2">
+                    <Avatar user={user} size="h-8 w-8" />
+                    <span className="max-w-[160px] truncate text-sm font-medium text-white">{firstName}</span>
+                  </span>
+                  <button
+                    onClick={() => {
+                      setOpen(false)
+                      logout()
+                    }}
+                    className="inline-flex items-center gap-1 text-sm text-mist hover:text-white"
+                  >
+                    <LogOut className="h-4 w-4" /> Sign out
+                  </button>
+                </div>
+              ) : (
+                <button
+                  onClick={() => {
+                    setOpen(false)
+                    loginWithGoogle()
+                  }}
+                  className="mt-1 flex w-full items-center justify-center gap-2 rounded-lg bg-white px-3 py-2.5 text-center text-sm font-semibold text-ink"
+                >
+                  <GoogleIcon className="h-4 w-4" />
+                  Log in with Google
+                </button>
+              )}
             </li>
           </ul>
         </motion.div>
